@@ -7,10 +7,14 @@
 }
 </router>
 <script>
+import Message from '@/components/inbox/Message.vue'
 import Echo from 'laravel-echo'
 window.io = require('socket.io-client')
 
 export default {
+    components: {
+        Message
+    },
     mounted() {
         // let echo = new Echo({
         //     broadcaster: 'socket.io',
